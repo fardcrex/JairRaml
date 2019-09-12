@@ -107,8 +107,8 @@ traits:
 /songs:
   type:
     collection:
-      exampleCollection: !include jukebox-include-songs.sample
-      exampleItem: !include jukebox-include-song-new.sample
+      exampleCollection: !include jukebox-include-songs.json
+      exampleItem: !include jukebox-include-song-new.json
   get:
     is: [
           searchable: {description: "with valid searchable fields: songTitle", example: "[\"songTitle\", \"Get L\", \"like\"]"},
@@ -118,7 +118,7 @@ traits:
   /{songId}:
     type:
       collection-item:
-        exampleItem: !include jukebox-include-song-retrieve.sample
+        exampleItem: !include jukebox-include-song-retrieve.json
     /file-content:
       description: The file to be reproduced by the client
       get:
@@ -149,8 +149,8 @@ traits:
 /artists:
   type:
     collection:
-      exampleCollection: !include jukebox-include-artists.sample
-      exampleItem: !include jukebox-include-artist-new.sample
+      exampleCollection: !include jukebox-include-artists.json
+      exampleItem: !include jukebox-include-artist-new.json
   get:
     is: [
           searchable: {description: "with valid searchable fields: countryCode", example: "[\"countryCode\", \"FRA\", \"equals\"]"},
@@ -160,11 +160,11 @@ traits:
   /{artistId}:
     type:
       collection-item:
-        exampleItem: !include jukebox-include-artist-retrieve.sample
+        exampleItem: !include jukebox-include-artist-retrieve.json
     /albums:
       type:
         readOnlyCollection:
-          exampleCollection: !include jukebox-include-artist-albums.sample
+          exampleCollection: !include jukebox-include-artist-albums.json
       description: Collection of albulms belonging to the artist
       get:
         description: Get a specific artist's albums list
@@ -172,8 +172,8 @@ traits:
 /albums:
   type:
     collection:
-      exampleCollection: !include jukebox-include-albums.sample
-      exampleItem: !include jukebox-include-album-new.sample
+      exampleCollection: !include jukebox-include-albums.json
+      exampleItem: !include jukebox-include-album-new.json
   get:
     is: [
           searchable: {description: "with valid searchable fields: genreCode", example: "[\"genreCode\", \"ELE\", \"equals\"]"},
@@ -183,11 +183,11 @@ traits:
   /{albumId}:
     type:
       collection-item:
-        exampleItem: !include jukebox-include-album-retrieve.sample
+        exampleItem: !include jukebox-include-album-retrieve.json
     /songs:
       type:
         readOnlyCollection:
-          exampleCollection: !include jukebox-include-album-songs.sample
+          exampleCollection: !include jukebox-include-album-songs.json
       get:
         is: [orderable: {fieldsList: "songTitle"}]
         description: Get the list of songs for the album with `albumId = {albumId}`
