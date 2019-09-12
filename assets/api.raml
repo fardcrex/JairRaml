@@ -1,8 +1,7 @@
-#%RAML 0.8
+#%RAML 1.0
 title: examle 
 version: 1.0
 baseUri: http://example.local/api
-
 traits:
   - secured:
       description: Some requests require authentication
@@ -110,7 +109,7 @@ traits:
                 }
                 
 /callback/order:
- /sim:
+  /sim:
     displayName: postSimOrderAction
     description: Set New Sim from External Provider
     is: [ unauthorized, internalError]
@@ -134,7 +133,7 @@ traits:
                 {
                   "result": "OK",
                 }
- /contract:
+  /contract:
     displayName: postSignContractOrderAction
     description: Set ContractSign from External Provider
     is: [ unauthorized, internalError]
