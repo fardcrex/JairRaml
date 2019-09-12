@@ -1,0 +1,29 @@
+#%RAML 0.8
+title: My first REST API
+version: v1
+protocols: [ HTTPS ] 
+baseUri: http://marcablanca.api/prueba
+mediaType: application/json
+
+/obtenerPokemon:
+  /{idPoke}:
+    get:
+      description: Retrieve a specific book title
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "estado": "ok",
+                  "pokemon": 
+                    {
+                      "id": 4,
+                      "nombre": "PIKACHU",
+                      "tipo": "fuego",
+                      "poder_principal": "lanza llama",
+                      "id_entrenador": 1
+                    },
+                  "status": 200,
+                  "message": "Se ha obtenido el pokemon."
+                }

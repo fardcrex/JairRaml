@@ -1,0 +1,25 @@
+#%RAML 1.0
+title: HelloWorldAPI  
+version: v1  
+baseUri: http://api.samplehost.com  
+/helloWorld:
+  /{hola}: 
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                    "estado": "ok",
+                    "pokemon": 
+                      {
+                        "id": 4,
+                        "nombre": "PIKACHU",
+                        "tipo": "fuego",
+                        "poder_principal": "lanza llama",
+                        "id_entrenador": 1
+                      },
+                    "status": 200,
+                    "message": "Se ha obtenido el pokemon."
+                }
