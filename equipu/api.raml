@@ -1,0 +1,45 @@
+#%RAML 1.0
+title: HelloWorldAPI  
+version: v1  
+baseUri: http://marcablanca.api
+/user-mention:
+  /list:
+    /{slug}:
+      description: Fake implementado obtienes una lista de las menciones del usuario
+      get:        
+        headers: 
+          key:
+            displayName:  llave marcablanca
+            type: string
+            required: true
+        responses: 
+          200:
+            body: 
+              application/json:
+                type: |
+                  {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-03/schema",
+                    "id": "http://jsonschema.net",
+                    "required": true,
+                    "properties": {
+                      "songTitle": {
+                        "type": "string",
+                        "required": true
+                    },
+                      "albumId": {
+                      "type": "string",
+                      "required": true,
+                      "minLength": 36,
+                      "maxLength": 36
+                    }
+                  }
+                example: !include respuesta.json
+/management:
+  description:   Que hay de nuevo viejo
+  post:
+    body: 
+      application/json:
+          
+      
+                  

@@ -1,0 +1,34 @@
+{
+   "estado": "ok",
+   "info": {
+       "data": [
+           {
+               "id": 4,
+               "institucion": "San Narco",
+               "facultad": "Gafitería",
+               "id_mencion": 5,
+               "mencion": "Mención Digimon",
+               "validado": 1
+           },
+           {
+               "id": 5,
+               "institucion": "PutólicASASa",
+               "facultad": "Desaguadero",
+               "id_mencion": 3,
+               "mencion": "Mención Empresarial",
+               "validado": 1
+           },
+           {
+               "id": 6,
+               "institucion": "San Marco",
+               "facultad": "Carpinteria",
+               "id_mencion": 6,
+               "mencion": "Mención Social",
+               "validado": 1
+           }
+       ],
+       "status": 200,
+       "name": "OK",
+       "message": "Se obtuvo las menciones."
+   }
+}             
